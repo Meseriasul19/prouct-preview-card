@@ -1,0 +1,176 @@
+@font-face {
+    font-family: Montserrat-medium;
+    src:url('./assets/fonts/Montserrat-Medium.ttf');
+}
+
+@font-face {
+    font-family: Montserrat-bold;
+    src:url('./assets/fonts/Montserrat-Bold.ttf');
+}
+
+@font-face {
+    font-family: Fraunces;
+    src: url('./assets/fonts/Fraunces_9pt-Bold.ttf');
+}
+
+:root {
+
+    /* Primary */
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+
+    /* Neutral */
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+
+    font-size: 1vw;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 1em;
+    position:absolute;
+}
+
+.image {
+    width:50%;
+    border-radius: 1em 0 0 1em;
+}
+
+.text {
+    padding: 2em;;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.text h2 {
+    font-family: Montserrat-medium;
+    color: var(--dark-grayish-blue);
+    font-size: 1em;
+    letter-spacing: 0.5em;
+}
+
+.text h1 {
+    font-family: Fraunces;
+    font-size: 2.5em;
+    line-height: 1em;   
+}
+
+.text p {
+    font-family: Montserrat-medium;
+    font-size: 1.1em;
+    color: var(--dark-grayish-blue);
+    line-height: 1.5em;
+}
+
+.price{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+}
+
+.price strong {
+    font-family: Fraunces;
+    font-size: 2.5em;
+    color: var(--dark-cyan);
+
+}
+
+.price b {
+    font-family: Montserrat-medium;
+    color: var(--dark-grayish-blue);
+    text-decoration: line-through;
+    font-size: 1em;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    background-color: var(--dark-cyan);
+    height: 50px;
+    border-radius: 0.5em;
+    border: 0;
+    height: auto;
+}
+
+.btn b {
+    color: white;
+    font-family: Montserrat-bold;
+    font-size: 1rem;
+}
+
+.svg {
+    padding:1rem;
+    width: 4rem;
+    height: 4rem;
+}
+
+.btn:hover {
+    cursor:pointer;
+}
+
+.attribution {
+    position: absolute;
+    top:0%;
+}
+
+
+@media only screen and (max-width:900px) {
+    .container {
+        width: 70%;
+    }
+
+    :root {
+        font-size: 1.5vw;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    :root {
+        font-size: 3vw;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+        height: 90%;
+        margin-top: 1em;
+       
+    }
+
+    .image {
+        width: 100%;
+        border-radius: 1em 1em 0 0;
+        height:30%;
+        object-fit: cover;
+    }
+
+    .text {
+        
+    }
+}
